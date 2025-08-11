@@ -1,20 +1,29 @@
-# Set up base image
-FROM node:18
+# Stage 1: Build
+FROM node:18 AS build
 
-#Set the working directory
 WORKDIR /app
 
-#Copy package.json and package-lock.json
+# Copy package.json files and install dependencies
 COPY package*.json ./
-
-#Install dependencies
 RUN npm install
 
-#Copy the rest of the application code
+# Copy source code
 COPY . .
 
-#Expose the port the app runs on
+# (Optional) Run build if you have a build step (e.g. React, TypeScript)
+# RUN npm run build
+
+
+# Stage 2: Production image
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy only node_modules and app files from build stage
+COPY --from=build /app /app
+
+# Expose port
 EXPOSE 3000
 
-#Start the application
+# Start the app
 CMD ["npm", "start"]
