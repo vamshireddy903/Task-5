@@ -21,14 +21,12 @@ Deploy and manage applications in Kubernetes locally using Minikube.
 
  Used `kubectl describe` and pod logs to monitor application and cluster health.  
  
-- Explored port forwarding to access the service locally and learned how to run port forwarding in the background.
-
 ## Deliverables  
 - deployment.yaml and service.yaml files.  
 - Screenshots showing running pods and exposed services.  
-<img width="1850" height="863" alt="image" src="https://github.com/user-attachments/assets/304e80b4-06f3-4db4-b7e2-69b7be335e34" />
+<img width="1424" height="667" alt="image" src="https://github.com/user-attachments/assets/d85e66ad-5b40-4e50-bd26-2e7771721c48" />
 
-<img width="1916" height="1009" alt="image" src="https://github.com/user-attachments/assets/5282a0cb-4c2f-4afa-9309-0e8087e0506c" />
+<img width="1920" height="963" alt="image" src="https://github.com/user-attachments/assets/4817d0d9-05b8-46c4-8cba-b29eb34ecea1" />
 
 
 
