@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node-app-container
-        image: vamshi589/node-app:replaceTag
+        image: vamshi589/node-app:v1
         ports:
         - containerPort: 3000
